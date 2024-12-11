@@ -9,7 +9,7 @@ for line in data:
   listA.append(int(a))
   listB.append(int(b))
 
-def solvePart1(firstList, secondList):
+def findSumOfDifferences(firstList, secondList):
   sum = 0
   firstList.sort()
   secondList.sort()
@@ -18,7 +18,7 @@ def solvePart1(firstList, secondList):
 
   return sum
 
-def solvePart2(firstList, secondList):
+def findSimScore(firstList, secondList):
   simScore = 0
   for i in range(len(firstList)):
     multiplier = secondList.count(firstList[i])
@@ -27,6 +27,6 @@ def solvePart2(firstList, secondList):
   return simScore
 
 
-#Part One:
-print("Part One:", solvePart1(listA, listB))
-print("Part Two:", solvePart2(listA, listB))
+#Answers
+print("Part One:", findSumOfDifferences(listA, listB))
+print("Part Two:", findSimScore(listA, listB))
